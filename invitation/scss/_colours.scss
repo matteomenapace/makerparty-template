@@ -1,0 +1,80 @@
+$yellow: 	#FFE600;
+$blue:		#00B0B7;
+$red: 		#EF413D;
+$grey:		#2A4D50;
+
+body
+{
+	background: white;
+	// color: #222222;
+	color: $grey; 
+}
+
+
+.yellow
+{
+	background-color: $yellow;
+	color: $red;
+	a { color: $blue; }
+
+	&.button
+	{
+		color: $red;
+		&:hover
+		{
+			background-color: $red;
+			color: $yellow;
+		}
+	}
+}
+
+.blue
+{
+	background-color: $blue;
+	color: $yellow;
+	a { color: $grey; }
+
+	&.button
+	{
+		color: $yellow;
+		&:hover
+		{
+			background-color: $yellow;
+			color: $blue;
+		}
+	}
+}
+
+.red
+{
+	background-color: $red;
+	color: $yellow;
+	a { color: $grey; }
+
+	&.button
+	{
+		color: $yellow;
+		&:hover
+		{
+			background-color: $yellow;
+			color: $red;
+		}
+	}
+}
+
+.grey
+{
+	background-color: $grey;
+	color: $yellow;
+	a { color: $blue; }
+
+	&.button
+	{
+		color: $yellow;
+		&:hover
+		{
+			background-color: $yellow;
+			color: $grey;
+		}
+	}
+}

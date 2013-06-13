@@ -1,0 +1,399 @@
+body {
+  background: white;
+  color: #2a4d50;
+}
+
+.yellow {
+  background-color: #ffe600;
+  color: #ef413d;
+}
+.yellow a {
+  color: #00b0b7;
+}
+.yellow.button {
+  color: #ef413d;
+}
+.yellow.button:hover {
+  background-color: #ef413d;
+  color: #ffe600;
+}
+
+.blue {
+  background-color: #00b0b7;
+  color: #ffe600;
+}
+.blue a {
+  color: #2a4d50;
+}
+.blue.button {
+  color: #ffe600;
+}
+.blue.button:hover {
+  background-color: #ffe600;
+  color: #00b0b7;
+}
+
+.red {
+  background-color: #ef413d;
+  color: #ffe600;
+}
+.red a {
+  color: #2a4d50;
+}
+.red.button {
+  color: #ffe600;
+}
+.red.button:hover {
+  background-color: #ffe600;
+  color: #ef413d;
+}
+
+.grey {
+  background-color: #2a4d50;
+  color: #ffe600;
+}
+.grey a {
+  color: #00b0b7;
+}
+.grey.button {
+  color: #ffe600;
+}
+.grey.button:hover {
+  background-color: #ffe600;
+  color: #2a4d50;
+}
+
+/*
+
+A "container" is a rectangle, based on a 6 x 4 grid.
+This means that a container is 6 units wide, and 4 units high.
+
+When you give the class "container" to an HTML element, it'll become a rectangle.
+
+container
+
+	column 			column 			column
+	  square 		  square
+	  	content 		content
+	  square 
+	  	content
+
+
+A container is nestable!
+
+
+*/
+.container {
+  height: 0;
+  width: 100%;
+  padding-bottom: 66.66667%;
+  overflow: hidden;
+  margin: 0;
+  *zoom: 1;
+}
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+
+.container.row,
+.container.short {
+  padding-bottom: 33.3333%;
+}
+
+.container.fixed-width {
+  max-width: 960px;
+  max-height: 640px;
+  padding-bottom: 0;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.column,
+.columns {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 100%;
+}
+
+[class*="column"] + [class*="column"]:last-child {
+  float: right;
+}
+
+[class*="column"] + [class*="column"].end {
+  float: left;
+}
+
+.one {
+  width: 16.66667%;
+}
+
+.two {
+  width: 33.33333%;
+}
+
+.three {
+  width: 50%;
+}
+
+.four {
+  width: 66.66667%;
+}
+
+.five {
+  width: 83.33333%;
+}
+
+.six {
+  width: 100%;
+}
+
+.square {
+  display: block;
+  width: 100%;
+  position: relative;
+  top: 0;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  padding: 12px;
+  margin: 0;
+}
+
+.sticker,
+.with-sticker {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 50%;
+}
+.sticker.xsmall,
+.with-sticker.xsmall {
+  background-size: 16.66667%;
+}
+.sticker.small,
+.with-sticker.small {
+  background-size: 33.33333%;
+}
+.sticker.medium,
+.with-sticker.medium {
+  background-size: 50%;
+}
+.sticker.large,
+.with-sticker.large {
+  background-size: 66.66667%;
+}
+.sticker.xlarge,
+.with-sticker.xlarge {
+  background-size: 83.33333%;
+}
+
+.logo-blue-yellow {
+  background-image: url('../images/logo-blue-yellow.png?1370708672');
+}
+
+.logo-yellow-blue {
+  background-image: url('../images/logo-yellow-blue.png?1370708651');
+}
+
+.square img {
+  height: 100%;
+  max-width: 999em;
+  margin: auto;
+  position: absolute;
+}
+.square img.right {
+  right: 0;
+}
+
+/* COLOUR PHOTO FILTERS */
+.filter {
+  position: relative;
+}
+.filter img {
+  /* Firefox 4+ */
+  filter: url("greyscale.svg#greyscale");
+  /* IE6-9 */
+  filter: gray;
+  /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+  -webkit-filter: grayscale(1) contrast(1.6);
+}
+.filter:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.filter.blue:after {
+  background: rgba(0, 176, 183, 0.6);
+}
+.filter.yellow:after {
+  background: rgba(255, 230, 0, 0.6);
+}
+.filter.red:after {
+  background: rgba(239, 65, 61, 0.6);
+}
+
+/* TYPOGRAHY */
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+b,
+h1,
+h2,
+h3,
+.button {
+  font-weight: 700;
+}
+
+p:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+  -webkit-margin-before: 0;
+}
+p:last-child,
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+  margin-bottom: 0;
+  -webkit-margin-after: 0;
+}
+
+code {
+  padding: 4px 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  border-radius: 3px;
+}
+
+a {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+  transition: all 0.6s;
+}
+a:hover {
+  transition: all 0.6s;
+  border-bottom: transparent;
+}
+
+.button {
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 6px;
+  display: block;
+  float: left;
+  transition: all 0.6s;
+  border: 1px solid transparent;
+}
+.button:hover {
+  transition: all 0.6s;
+  border: 1px solid;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  cursor: default;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:focus {
+  outline: none;
+}
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+object,
+embed {
+  height: 100%;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.hide {
+  display: none;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}

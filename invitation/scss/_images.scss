@@ -1,0 +1,44 @@
+.square
+{
+	img
+	{
+		// stretched, top-left
+		height: 100%;
+		max-width: 999em;
+
+		// vertical align
+		margin: auto;
+		position: absolute;
+		// top: 0;
+		// bottom: 0;
+		// left: 0;
+		// right: 0;
+
+		&.right
+		{
+			right: 0;
+		}
+	}
+}
+
+
+
+// .square
+// {
+// 	position: relative; 
+
+// 	.frame
+// 	{
+// 		position: absolute;
+//   left: -5075px;
+//   width: 10225px;
+//   text-align: center;
+
+// 		img
+// 		{
+// 			display: inline-block;
+// 			height: 100%;
+// 		max-width: 999em;
+// 		}
+// 	}
+// }

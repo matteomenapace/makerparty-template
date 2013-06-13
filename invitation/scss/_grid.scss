@@ -1,0 +1,163 @@
+/*
+
+A "container" is a rectangle, based on a 6 x 4 grid.
+This means that a container is 6 units wide, and 4 units high.
+
+When you give the class "container" to an HTML element, it'll become a rectangle.
+
+container
+
+	column 			column 			column
+	  square 		  square
+	  	content 		content
+	  square 
+	  	content
+
+
+A container is nestable!
+
+
+*/
+
+
+// CONTAINER
+
+	.container 
+	{
+		// 3x2 rectangle
+		// or 100% x 66.66667%
+		height: 0;
+		width: 100%;
+		padding-bottom: 66.66667%;
+		overflow: hidden;
+		margin: 0;
+
+		*zoom: 1;
+
+		&:before,
+		&:after
+		{
+			content: " ";
+			display: table;
+		}
+
+		&:after
+		{
+			clear: both;
+		}
+	}
+
+	// default container's height
+	// 3 x 2
+	// .container.tall
+	// {
+	// 	padding-bottom: 66.66667%;
+	// }
+
+	// half container's height
+	// 3 x 1
+	.container.row,
+	.container.short
+	{
+		padding-bottom: 33.3333%;
+	}	
+
+	// LIMIT WIDTH
+	.container.fixed-width 
+	{
+		max-width: 960px;
+		max-height: 640px;
+		padding-bottom: 0;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+// COLUMNS       
+
+	.column,
+	.columns 
+	{
+		position: relative;
+		float: left; 
+		// padding-left: 0.9375em;
+		// padding-right: 0.9375em;
+		
+		width: 100%;
+		padding: 0;
+		padding-bottom: 100%;	
+	}
+
+	[class*="column"] + [class*="column"]:last-child 
+	{
+		float: right; 
+	}
+
+	[class*="column"] + [class*="column"].end 
+	{
+		float: left; 
+	}
+
+	.one,
+	.two,
+	.three,
+	.four,
+	.five,
+	.six 
+	{
+		// position: relative;
+	}
+
+	.one 
+	{
+		width: 16.66667%; 
+	}
+
+	.two 
+	{
+		width: 33.33333%;
+	}
+
+	.three 
+	{
+		width: 50%; 
+	}
+
+	.four 
+	{
+		width: 66.66667%; 
+	}
+
+	.five 
+	{
+		width: 83.33333%; 
+	}
+
+	.six 
+	{
+		width: 100%; 
+	}
+
+// SQUARE	
+
+	.square
+	{
+		display: block;
+		width: 100%;
+		position: relative;
+		top: 0;
+		height: 0;
+		padding-bottom: 100%;
+		overflow: hidden;
+	}
+
+// CONTENT	
+
+	.content
+	{
+		position: relative;
+		padding: $unit;
+		margin: 0;
+	}

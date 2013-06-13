@@ -1,0 +1,44 @@
+@import "compass";
+
+.sticker,
+.with-sticker
+{
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 50%; // .medium
+
+	&.xsmall
+	{
+		background-size: 16.66667%;
+	}
+
+	&.small
+	{
+		background-size: 33.33333%;
+	}
+
+	&.medium
+	{
+		background-size: 50%;
+	}
+	
+	&.large
+	{
+		background-size: 66.66667%;
+	}
+
+	&.xlarge
+	{
+		background-size: 83.33333%;
+	}
+}
+
+.logo-blue-yellow
+{
+	background-image: image-url('logo-blue-yellow.png');
+}
+
+.logo-yellow-blue
+{
+	background-image: image-url('logo-yellow-blue.png');	
+}
