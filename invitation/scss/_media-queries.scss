@@ -1,0 +1,25 @@
+@media (max-width: 768px) 
+{
+	.container,
+	.container.short
+	{
+		height: auto;
+		padding-bottom: 0;
+	} 
+
+	.column,
+	.columns 
+	{
+		padding-bottom: 0;	
+	}
+		
+    .one, 
+	.two,
+	.three,
+	.four,
+	.five,
+	.six 
+	{
+		width: 100%; 
+	}
+}

@@ -33,11 +33,20 @@ a:focus
 	outline: none; 
 }
 
+.scroll
+{
+  overflow: auto;
+} 
+
 img,
 object,
-embed {
+embed 
+{
   max-width: 100%;
-  height: auto; }
+  // width: 100%;
+  height: auto; 
+  // margin: 0 auto;
+}
 
 object,
 embed {
